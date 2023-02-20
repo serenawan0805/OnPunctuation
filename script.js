@@ -16,7 +16,7 @@ $(document).ready(function(){
   });
 
 
-  
+
 
 let section = document.querySelectorAll("section");
 let menu = document.querySelectorAll("header nav a");
@@ -266,3 +266,39 @@ reveal();
 })();
 
 
+const generateQuote = function() {
+    const quotes = [
+    {
+        quote: "One other little punctuation mark one can have feelings about and that is the apostrophe for possession.",
+        numberOfSentence: "1st Sentence:"
+    },
+    {
+        quote: "Well feel as you like about that, I can see and I do see that for many that for some the possessive case apostrophe has a gentle tender insinuation that makes it very difficult to definitely decide to do without it.",
+        numberOfSentence: "2nd Sentence:"
+    },
+    {
+        quote: "One does do without it, I do, I mostly always do, but I cannot deny that from time to time I feel myself having regrets and from time to time I put it in to make the possessive case.",
+        numberOfSentence: "3rd Sentence:"
+    },
+    {
+        quote: "I absolutely do not like it and leaving it out I feel no regret, there it is unnecessary and not ornamental but inside a word and its s well perhaps, perhaps it does appeal by its weakness to your weakness.",
+        numberOfSentence: "4th Sentence:"
+    },
+    {
+        quote: "At least at any rate from time to time I do find myself letting it alone if it has come in and sometimes it has come in.",
+        numberOfSentence: "5th Sentence:"
+    },
+    {
+        quote: "I cannot positively deny but that I do from time to time let it come in.",
+        numberOfSentence: "6th Sentence:" }
+];
+
+    let arrayIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quotes").innerHTML = quotes[arrayIndex].quote;
+    document.getElementById("numberOfSentence").innerHTML = quotes[arrayIndex].numberOfSentence;
+
+}
+window.onload = function() {
+    generateQuote();
+    document.getElementById("generate").addEventListener('click', generateQuote);
+}

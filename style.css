@@ -290,6 +290,39 @@ section:nth-child(5) {
     text-align: center;
 }
 
+
+#ap .text-container .text-box{
+    margin: 5% 30% 5% 30%;
+    padding: 50px;
+    height:50%;
+    width: 60%;
+    border-radius: 5px;
+    background: #ffffff;
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+  }
+
+#generate {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 150%;
+    border: dotted 3px rgb(255, 255, 255);
+}
+
+/* <div class="outer-container">
+                        <p id="numberOfSentence"></p>
+                        <p id="quotes"></p>
+                        <button id="generate">Generate</button>
+                    </div> */
+
+
+.outer-container {
+    color: #000000;
+}
+
 section:nth-child(6) {
     background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
     background-size: 20px 20px;
@@ -318,7 +351,7 @@ section:nth-child(6) {
    position: fixed; 
     margin: 2vh 0;
     opacity: 0;
-    left: -40%;
+    left: -30%;
     width: 80vw;
     animation: switch 96s linear infinite;
   }
@@ -442,6 +475,7 @@ section:nth-child(8) {
     color: #000000;
     align-items: center;
     text-align: center;
+    font-family: 'Patrick Hand', cursive;
 }
 
 .ink {
@@ -452,6 +486,7 @@ section:nth-child(9) {
     background-color: #000000;
     background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
     background-size: 20px 20px;
+    font-family: 'Patrick Hand', cursive;
 }
 
 #end {
