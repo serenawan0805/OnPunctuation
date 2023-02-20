@@ -178,11 +178,11 @@ section:nth-child(3) {
   }  
   .removed {
     text-decoration: line-through;
-    color: #ffffff;
+    color: rgba(195, 95, 84, 0.691);
     cursor: help;
   }
   .removed:hover {
-    color: #808080;
+    color: rgb(231, 77, 60);
   }
   
   .removed aside {
@@ -231,6 +231,52 @@ section:nth-child(4) {
 #ex p {
     color: #ffffff;
 } */
+
+inss, dels{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 .3em;
+  }
+  inss {
+    background: #83d5a8;
+    height: auto;
+    border-radius: .3em;
+    display: inline; 
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    margin-left: .07em;
+    margin-right: .07em;
+  }
+  dels {
+    background: rgba(231, 76, 60,.5);
+    cursor: no-drop;
+    position: relative;
+    top: .2em;
+    height: 1.31em;
+    width: .4em;
+    line-height: 1.35;
+    overflow: hidden;
+    color: transparent;
+    margin: -.4em .07em -.05em .07em;
+    padding: 0 0 .1em 0;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-radius: .3em;
+    transition: padding-left ease .3s, padding-right ease .3s, color ease .15s;
+  }
+  dels:hover {
+    width: auto;
+    color: #962e22;
+    display: inline;
+    padding: 0 .35em 0em 0.35em;
+    line-height: unset;
+    position: unset;
+    top: unset;
+    height: unset;
+    transition: padding-left ease .3s, padding-right ease .3s, color ease .7s;
+  }
 
 section:nth-child(5) {
     background-color: #000000;
