@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #000000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 10px rgb(255, 255, 255) dotted;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    width: 10%;
+    padding: 5px 10px;
+    font-size: 150%;
+    color: #ffffff;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    border: 2px dotted white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+header nav a:hover,
+header nav a.active {
+    background: #ffffff;
+    color: #000000;
+    transition: 0.5s ease-out;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IDK WHAT THE 1 IS... */
+section:nth-child(1) {
+    color: #5240c8;
+}
+
+/* This is the home section */
+section:nth-child(2) {
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+}
+
+#home {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 700%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+#home h2 {
+    color: black;
+    text-transform: none;
+}
+
+#home h3 {
+    color: black;
+    font-size: 150%;
+} 
+
+/* #home .steinHome {
+    margin: 10%;
+    width: 10rem;
+    height: 10rem;
+    background-color: black;
+} */
+
+#home p {
+    padding-bottom: 1%;
+    color: black;
+    opacity: 0;
+    font-size: 200%;
+    animation: textAppear 2s forwards linear 6s;
+}
+
+.square {
+    height: 20vmin;
+    width: 20vmin;
+    background-color: #000000;
+    padding: 1vmin;
+    overflow: hidden;
+    animation: movesquare 4s forwards linear;
+  }
+
+  .square h4 {
+    opacity: 0;
+    font-size: 200%;
+    animation: textAppear 2s forwards linear 4s;
+  }
+  
+  @keyframes movesquare {
+    0% {
+      margin: 0;
+    }
+    100% {
+      margin: 0 0 0 40%;
+      transform:rotateZ(360deg);
+    }
+  }
+
+  @keyframes textAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+section:nth-child(3) {
+    background-color: #000000;
+    background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#q {
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+}
+
+#q .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background: #ffffff;
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+  }
+
+#q p {
+    color: #000000;
+}
+
+section:nth-child(4) {
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+}
+
+#ex {
+    color: #000000;
+    align-items: center;
+    text-align: center;
+}
+
+/* 
+#ex .text-container .text-box{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #000000;
+    background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+#ex p {
+    color: #ffffff;
+} */
+
+section:nth-child(5) {
+    background-color: #000000;
+    background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#ap {
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+section:nth-child(6) {
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+}
+
+#pe {
+    color: #000000;
+    align-items: center;
+    text-align: center;
+}
+
+#fly-in {
+    font-size: 4em;
+    margin: 10%;
+    height: 20vh; 
+    text-transform: uppercase;
+  }
+  
+  #fly-in span {
+    display: block;
+    font-size: .4em;
+    opacity: .8;
+  }
+  
+  #fly-in div {
+   position: fixed; 
+    margin: 2vh 0;
+    opacity: 0;
+    left: -40%;
+    width: 80vw;
+    animation: switch 96s linear infinite;
+  }
+  
+  #fly-in div:nth-child(2) { animation-delay: 12s}
+  #fly-in div:nth-child(3) { animation-delay: 24s}
+  #fly-in div:nth-child(4) { animation-delay: 36s}
+  #fly-in div:nth-child(5) { animation-delay: 48s}
+  #fly-in div:nth-child(6) { animation-delay: 60s}
+  #fly-in div:nth-child(7) { animation-delay: 72s}
+  #fly-in div:nth-child(8) { animation-delay: 84s}
+  
+  @keyframes switch {
+      0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+      3% { opacity: 1;filter: blur(0); transform:scale(1)}
+      10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+      13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+      80% { opacity: 0}
+      100% { opacity: 0}
+  }
+
+
+
+
+section:nth-child(7) {
+    background-color: #000000;
+    background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#c {
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+section:nth-child(8) {
+    background-image: linear-gradient(#0000002c 1px, transparent 1px), linear-gradient(to right, #0000002c 1px, #ffffff 1px);
+    background-size: 20px 20px;
+}
+
+
+#pillar {
+    display: block;
+    /* margin: 100px auto; */
+    width: 300px;
+    transform: translateX(-200px);
+    perspective: 1900px;
+    margin-left: 30%;
+  }
+  
+  .wrap {
+    display: flex;
+    transform: rotateY(0deg);
+    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-style: preserve-3d;
+  }
+  
+  .row {
+    width: 1000px;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: all 3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .row:hover .wrap {
+    transform: rotateY(-45deg);
+    cursor: pointer;
+  }
+  .row:hover {
+    z-index: 1;
+  }
+  .row:hover .left:before {
+    width: 55%;
+  }
+  .row .left {
+    width: 400px;
+    /* padding: 15px 20px; */
+    padding: 5px 10px;
+    text-align: right;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+  .row .left:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transition: width 1s ease-in-out;
+  }
+  .row .right {
+    width: 400px;
+    /* padding: 15px 20px; */
+    padding: 5px 10px;
+    text-align: left;
+    transform: rotateY(90deg);
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .rows {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    margin: 5%;
+  }
+
+
+#co {
+    color: #000000;
+    align-items: center;
+    text-align: center;
+}
+
+.ink {
+    font-family: 'Patrick Hand', cursive;
+}
+
+section:nth-child(9) {
+    background-color: #000000;
+    background-image: linear-gradient(#ffffff2c 1px, transparent 1px), linear-gradient(to right, #ffffff2c 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#end {
+    color: #fff;
+    align-items: center;
+    text-align: center;
+}
+
+#end h1 {
+    font-size: 700%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+#end h3 {
+    font-size: 150%;
+}
+
+section .container {
+    margin: 50px;
+    /* margin here for text*/
+}
+
+section h2 {
+    font-size: 400%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 125%;
+    text-align: center;
+    line-height: 120%;
+}
+
+section .text-container {
+    display: flex;
+}
+
+section .text-container .text-box h3 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .text-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1500px) {
+    section .container {
+        margin: 200px;
+        /* margin here for text*/
+    }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
