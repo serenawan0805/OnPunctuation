@@ -270,6 +270,10 @@ section:nth-child(4) {
     text-align: center;
 }
 
+#ex .container {
+  margin: 15%;
+}
+
 #ex h2 {
     margin: 2%;
 }
@@ -527,7 +531,7 @@ section:nth-child(6) {
    position: fixed; 
     margin: 2vh 0;
     opacity: 0;
-    left: -15%;
+    left: -30%;
     width: 80vw;
     animation: switch 96s linear infinite;
   }
@@ -564,7 +568,13 @@ section:nth-child(7) {
     text-align: center;
 }
 
+#c .container {
+  margin: 15%;
+}
 
+#c h2 {
+  margin-bottom: 2%;
+}
 
 .squareeeeee {
     height: 20vmin;
